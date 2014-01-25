@@ -839,11 +839,8 @@ public:
     static const char SCENE_MODE_FLOWERS[];
     static const char SCENE_MODE_AR[];
 #ifdef QCOM_SONY_HARDWARE
-#ifdef QCOM_SONY_NEW_CAMERA
-    static const char SCENE_MODE_DOCUMENT[];
-#else
     static const char EX_SCENE_MODE_DOCUMENT[];
-#endif
+    static const char SCENE_MODE_DOCUMENT[];
 #endif
 #endif
     // Applications are looking for a barcode. Camera driver will be optimized

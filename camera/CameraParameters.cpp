@@ -353,11 +353,8 @@ const char CameraParameters::SCENE_MODE_HDR[] = "hdr";
 #ifdef QCOM_HARDWARE
 const char CameraParameters::SCENE_MODE_AR[] = "AR";
 #ifdef QCOM_SONY_HARDWARE
-#ifdef QCOM_SONY_NEW_CAMERA
-const char CameraParameters::SCENE_MODE_DOCUMENT[] = "document";
-#else
 const char CameraParameters::EX_SCENE_MODE_DOCUMENT[] = "document";
-#endif
+const char CameraParameters::SCENE_MODE_DOCUMENT[] = "document";
 #endif
 // Values for auto scene detection settings.
 const char CameraParameters::SCENE_DETECT_OFF[] = "off";
