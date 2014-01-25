@@ -107,9 +107,9 @@ const char CameraParameters::KEY_FOCUS_MODE[] = "focus-mode";
 const char CameraParameters::KEY_SUPPORTED_FOCUS_MODES[] = "focus-mode-values";
 const char CameraParameters::KEY_MAX_NUM_FOCUS_AREAS[] = "max-num-focus-areas";
 const char CameraParameters::KEY_FOCUS_AREAS[] = "focus-areas";
-#ifdef SONY_CAMERA
-const char CameraParameters::KEY_FOCUS_AREA_CENTER[] = "focus-area-center";
-#endif
+//#ifdef SONY_CAMERA
+//const char CameraParameters::KEY_FOCUS_AREA_CENTER[] = "focus-area-center";
+//#endif
 const char CameraParameters::KEY_FOCAL_LENGTH[] = "focal-length";
 const char CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE[] = "horizontal-view-angle";
 const char CameraParameters::KEY_VERTICAL_VIEW_ANGLE[] = "vertical-view-angle";
@@ -156,12 +156,6 @@ const char CameraParameters::KEY_SUPPORTED_REDEYE_REDUCTION[] = "redeye-reductio
 const char CameraParameters::KEY_HIGH_DYNAMIC_RANGE_IMAGING[] = "hdr";
 const char CameraParameters::KEY_SUPPORTED_HDR_IMAGING_MODES[] = "hdr-values";
 #endif
-#ifdef SAMSUNG_CAMERA_HARDWARE
-const char CameraParameters::KEY_ANTI_SHAKE_MODE[] = "anti-shake";
-const char CameraParameters::KEY_METERING[] = "metering";
-const char CameraParameters::KEY_WDR[] = "wdr";
-const char CameraParameters::KEY_WEATHER[] = "weather";
-#endif
 const char CameraParameters::KEY_VIDEO_SIZE[] = "video-size";
 const char CameraParameters::KEY_SUPPORTED_VIDEO_SIZES[] = "video-size-values";
 const char CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO[] = "preferred-preview-size-for-video";
@@ -177,17 +171,13 @@ const char CameraParameters::KEY_LIGHTFX[] = "light-fx";
 const char CameraParameters::KEY_ZSL[] = "zsl";
 const char CameraParameters::KEY_SUPPORTED_ZSL_MODES[] = "zsl-values";
 const char CameraParameters::KEY_CAMERA_MODE[] = "camera-mode";
+const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
+const char CameraParameters::KEY_POWER_MODE_SUPPORTED[] = "power-mode-supported";
 #ifdef QCOM_SONY_HARDWARE
 const char CameraParameters::KEY_EX_SUPPORTED_METERING_MODES[] = "semc-metering-mode-values";
 #endif
 #endif
 const char CameraParameters::KEY_AE_BRACKET_HDR[] = "ae-bracket-hdr";
-#if defined(CAMERA_POWERMODE) || defined(QCOM_SONY_HARDWARE)
-const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
-const char CameraParameters::KEY_POWER_MODE_SUPPORTED[] = "power-mode-supported";
-#endif
-// const char CameraParameters::KEY_AE_BRACKET_HDR[] = "ae-bracket-hdr";
-
 /*only effective when KEY_AE_BRACKET_HDR set to ae_bracketing*/
 //const char CameraParameters::KEY_AE_BRACKET_SETTING_KEY[] = "ae-bracket-setting";
 
@@ -271,17 +261,14 @@ const char CameraParameters::OBJECT_TRACKING_ON[] = "object-tracking";
 const char CameraParameters::OBJECT_TRACKING_OFF[] = "object-tracking";
 #endif
 
+#ifdef ZTE_CAMERA_HARDWARE
+const char CameraParameters::KEY_SHUTTER_SOUND_SELECT[] = "shutter-sound-select";
+const char CameraParameters::KEY_SHUTTER_SOUND[] = "shutter-sound";
+#endif
+
 const char CameraParameters::TRUE[] = "true";
 const char CameraParameters::FALSE[] = "false";
 const char CameraParameters::FOCUS_DISTANCE_INFINITY[] = "Infinity";
-
-#ifdef SONY_CAMERA
-const char CameraParameters::KEY_FOCUS_AREA_CENTER[] = "focus-area-center";
-#endif
-//#ifdef QCOM_SONY_HARDWARE
-//const char CameraParameters::KEY_EX_SUPPORTED_METERING_MODES[] = "semc-metering-mode-values";
-//#endif
-
 
 // Values for white balance settings.
 const char CameraParameters::WHITE_BALANCE_AUTO[] = "auto";
@@ -352,12 +339,6 @@ const char CameraParameters::SCENE_MODE_FIREWORKS[] = "fireworks";
 const char CameraParameters::SCENE_MODE_SPORTS[] = "sports";
 const char CameraParameters::SCENE_MODE_PARTY[] = "party";
 const char CameraParameters::SCENE_MODE_CANDLELIGHT[] = "candlelight";
-#ifdef STE_SAMSUNG_HARDWARE
-const char CameraParameters::SCENE_MODE_BACKLIGHT[] = "backlight";
-const char CameraParameters::SCENE_MODE_DUSKDAWN[] = "duskdawn";
-const char CameraParameters::SCENE_MODE_FALLCOLOR[] = "fallcolor";
-const char CameraParameters::SCENE_MODE_TEXT[] = "text";
-#endif
 #ifdef QCOM_HARDWARE
 #ifdef SAMSUNG_CAMERA_LEGACY
 const char CameraParameters::SCENE_MODE_BACKLIGHT[] = "back-light";
@@ -371,7 +352,6 @@ const char CameraParameters::SCENE_MODE_BARCODE[] = "barcode";
 const char CameraParameters::SCENE_MODE_HDR[] = "hdr";
 #ifdef QCOM_HARDWARE
 const char CameraParameters::SCENE_MODE_AR[] = "AR";
-
 #ifdef QCOM_SONY_HARDWARE
 #ifdef QCOM_SONY_NEW_CAMERA
 const char CameraParameters::SCENE_MODE_DOCUMENT[] = "document";
@@ -379,7 +359,6 @@ const char CameraParameters::SCENE_MODE_DOCUMENT[] = "document";
 const char CameraParameters::EX_SCENE_MODE_DOCUMENT[] = "document";
 #endif
 #endif
-
 // Values for auto scene detection settings.
 const char CameraParameters::SCENE_DETECT_OFF[] = "off";
 const char CameraParameters::SCENE_DETECT_ON[] = "on";
@@ -392,18 +371,8 @@ const char CameraParameters::PIXEL_FORMAT_YUV420SP[] = "yuv420sp";
 #ifdef QCOM_HARDWARE
 const char CameraParameters::PIXEL_FORMAT_YUV420SP_ADRENO[] = "yuv420sp-adreno";
 #endif
-#ifdef STE_HARDWARE
-const char CameraParameters::PIXEL_FORMAT_YUV420SPNV12[] = "yuv420spnv12";
-#endif
 const char CameraParameters::PIXEL_FORMAT_YUV422I[] = "yuv422i-yuyv";
 const char CameraParameters::PIXEL_FORMAT_YUV420P[]  = "yuv420p";
-#ifdef STE_HARDWARE
-const char CameraParameters::PIXEL_FORMAT_YUV420MB[] = "yuv420mb";
-const char CameraParameters::PIXEL_FORMAT_YVU422SP[] = "yvu422sp";
-const char CameraParameters::PIXEL_FORMAT_YVU422P[] = "yvu422p";
-const char CameraParameters::PIXEL_FORMAT_YVU420SP[] = "yvu420sp";
-const char CameraParameters::PIXEL_FORMAT_YVU420P[]  = "yvu420p";
-#endif
 const char CameraParameters::PIXEL_FORMAT_RGB565[] = "rgb565";
 const char CameraParameters::PIXEL_FORMAT_RGBA8888[] = "rgba8888";
 const char CameraParameters::PIXEL_FORMAT_JPEG[] = "jpeg";
@@ -478,21 +447,21 @@ const char CameraParameters::SKIN_TONE_ENHANCEMENT_ENABLE[] = "enable";
 const char CameraParameters::SKIN_TONE_ENHANCEMENT_DISABLE[] = "disable";
 
 const char CameraParameters::KEY_SHARPNESS[] = "sharpness";
-#ifdef QCOM_HARDWARE
+#ifdef QCOM_LEGACY_CAM_PARAMS
 const char CameraParameters::KEY_MAX_SHARPNESS[] = "sharpness-max";
 const char CameraParameters::KEY_MIN_SHARPNESS[] = "sharpness-min";
 #else
 const char CameraParameters::KEY_MAX_SHARPNESS[] = "max-sharpness";
 #endif
 const char CameraParameters::KEY_CONTRAST[] = "contrast";
-#ifdef QCOM_HARDWARE
+#ifdef QCOM_LEGACY_CAM_PARAMS
 const char CameraParameters::KEY_MAX_CONTRAST[] = "contrast-max";
 const char CameraParameters::KEY_MIN_CONTRAST[] = "contrast-min";
 #else
 const char CameraParameters::KEY_MAX_CONTRAST[] = "max-contrast";
 #endif
 const char CameraParameters::KEY_SATURATION[] = "saturation";
-#ifdef QCOM_HARDWARE
+#ifdef QCOM_LEGACY_CAM_PARAMS
 const char CameraParameters::KEY_MAX_SATURATION[] = "saturation-max";
 const char CameraParameters::KEY_MIN_SATURATION[] = "saturation-min";
 #else
@@ -584,12 +553,6 @@ void CameraParameters::setOrientation(int orientation)
          set("orientation", landscape);
     }
 }
-#endif
-
-#ifdef STE_HARDWARE
-// keys for record stride and sliceheight
-const char CameraParameters::KEY_RECORD_STRIDE[] = "record-stride";
-const char CameraParameters::KEY_RECORD_SLICE_HEIGHT[] = "record-slice-height";
 #endif
 
 
@@ -965,7 +928,7 @@ void CameraParameters::dump() const
     }
 }
 
-// #ifdef QCOM_HARDWARE
+#ifdef QCOM_HARDWARE
 void CameraParameters::setTouchIndexAec(int x, int y)
 {
     char str[32];
@@ -1017,7 +980,7 @@ void CameraParameters::getFocusAreaCenter(int *x, int *y) const
 {
     // dummy
 }
-
+#endif
 void CameraParameters::getTouchIndexAf(int *x, int *y) const
 {
     *x = -1;
